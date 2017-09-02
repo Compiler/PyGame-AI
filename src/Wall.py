@@ -1,5 +1,5 @@
 import pygame
-from GridObject import GridObject
+#from GridObject import GridObject
 
 class Wall(GridObject):
 
