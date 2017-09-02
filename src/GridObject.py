@@ -1,4 +1,5 @@
 import pygame
+from GridObject import GridObject
 
 
 
@@ -8,6 +9,10 @@ class GridObject:
         self.x = xpos
         self.y = ypos
         self.color = color
+    
+
+    def render(self, screen, w, h):
+        pygame.draw.rect(screen, self.color, pygame.Rect(self.x, self.y, w, h))
 
     def getX(self):
         return self.x
