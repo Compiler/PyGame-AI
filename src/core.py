@@ -1,7 +1,7 @@
 import pygame
 from Grid import Grid
-
-
+from Wall import Wall
+from GridObject import GridObject
 
 
 
@@ -14,7 +14,9 @@ def init():
     screen = pygame.display.set_mode((400,300))
 
     done = False
-    grid = Grid(100, 100)
+    grid = Grid(2000, 1000)
+    x = Wall(10,10)
+    grid.add(x)
     while not done:
         for event in pygame.event.get():
             if event.type == pygame.QUIT:
