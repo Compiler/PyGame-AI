@@ -14,6 +14,11 @@ class Grid:
         self.map_height = (int)(height / self._divisor)
         self.grid = [[GridObject]*self.map_width for x in range(self.map_height)]
 
+    
+    def add(self, x, y, gridType):
+        if not isinstance(gridType, GriddObject):
+            raise TypeError
+        self.grid[x][y] = gridType
 
     def render(self, screen):
         for y in range(0, self.map_height):
