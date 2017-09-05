@@ -11,7 +11,7 @@ class GridObject:
     
 
     def render(self, screen, w, h):
-        pygame.draw.rect(screen, self.color, pygame.Rect(self.x * w, self.y * w, w, h))
+        pygame.draw.rect(screen, self.color, pygame.Rect(self.x * w, self.y * h, w, h))
 
     def getX(self):
         return self.x

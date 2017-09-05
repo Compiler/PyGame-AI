@@ -12,7 +12,7 @@ class Grid:
     def __init__(self, width, height):
         self.map_width = (int)(width / self._divisor)
         self.map_height = (int)(height / self._divisor)
-        self.grid = [[GridObject]*self.map_height for x in range(self.map_width)]
+        self.grid = [[None]*self.map_height for x in range(self.map_width)]
 
     
     def add(self, gridType):
@@ -35,7 +35,8 @@ class Grid:
                 if isinstance(self.grid[x][y], GridObject):
                     self.grid[x][y].render(screen, self._divisor, self._divisor)
                 else:
+                  
                     a = x * self._divisor
                     b = y * self._divisor
                     w = self._divisor
-                    pygame.draw.rect(screen, (200, 255, 200), pygame.Rect(a, b, w, w))
+                    pygame.draw.rect(screen, (20, 25, 20), pygame.Rect(a, b, w, w))
