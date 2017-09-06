@@ -34,8 +34,7 @@ class Grid:
             for x in range(0, self.map_width):
                 if isinstance(self.grid[x][y], GridObject):
                     self.grid[x][y].render(screen, self._divisor, self._divisor)
-                elif x == 5 and y == 5:
-                  
+                else:
                     a = x * self._divisor
                     b = y * self._divisor
                     w = self._divisor

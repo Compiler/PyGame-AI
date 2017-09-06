@@ -15,7 +15,7 @@ def init():
 
     done = False
     grid = Grid(2000, 1000)
-    x = Wall(5,5)
+    x = Wall(50,50)
     grid.add(x)
     while not done:
         for event in pygame.event.get():
